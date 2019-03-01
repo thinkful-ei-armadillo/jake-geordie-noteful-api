@@ -126,7 +126,7 @@ notefulRouter
   })
   .delete((req, res, next) => {
     const { folderId } = req.params;
-    NotefulService.deleteNote(req.app.get('db'), folderId)
+    NotefulService.deleteFolder(req.app.get('db'), folderId)
       .then(folder => {
         if (!folder) {
           return res.status(404).json({

@@ -1,0 +1,1 @@
+ALTER TABLE notes FOREIGN KEY (folderId) REFERENCES folders(id) ON DELETE CASCADE;
