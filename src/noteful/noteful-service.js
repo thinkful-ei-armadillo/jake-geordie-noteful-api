@@ -37,7 +37,7 @@ const NotefulService = {
     return knex
       .from('folders')
       .select('*')
-      .where('id', id)
+      .where({ id })
       .first();
   },
   insertFolder(knex, newFolder) {
