@@ -10,7 +10,8 @@ const sanatizeNotes = notes => ({
   id: notes.id,
   title: xss(notes.title),
   modified: notes.modified,
-  content: xss(notes.content)
+  content: xss(notes.content),
+  folderid: notes.folderid
 });
 
 const sanatizeFolders = folders => ({
